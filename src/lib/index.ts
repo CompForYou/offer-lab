@@ -81,3 +81,43 @@ export {
   type CostedPathsInput,
 } from './costed-paths'
 export { runOffer, type OfferResults } from './run-offer'
+
+// Data in, and data out. SPEC milestone M2.
+export { parseDelimitedText, normalizeHeader } from './csv'
+export {
+  parseCurrency,
+  looksNumeric,
+  parseFte,
+  parseBoolean,
+  normalizeDate,
+} from './parse-values'
+export type { ImportIssue } from './import-issue'
+export {
+  scanHeaders,
+  chooseColumn,
+  missingRequiredFields,
+  INCUMBENT_FIELDS,
+  type IncumbentField,
+  type MatchQuality,
+  type ColumnMapping,
+  type HeaderScan,
+  type FieldDescriptor,
+} from './column-mapping'
+export {
+  importIncumbentsFromCsv,
+  type IncumbentImportResult,
+  type IncumbentImportOptions,
+} from './import-incumbents'
+export {
+  importGradesFromCsv,
+  type GradeImportResult,
+} from './import-grades'
+export {
+  serializeScenario,
+  parseScenarioFile,
+  scenarioFileName,
+  SCENARIO_FILE_VERSION,
+  type ScenarioFile,
+  type ScenarioParseResult,
+} from './scenario-file'
+export { downloadText, readFileAsText } from './download'
