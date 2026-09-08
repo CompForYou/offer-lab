@@ -60,24 +60,32 @@ export const SAMPLE_TEAM: Incumbent[] = [
   { id: 'A-351', gradeId: 'G3', baseSalary: 77_800, fte: 1, hireDate: '2024-02-05', performanceRating: 'Meets', managerId: 'A-425' },
 
   // Grade 4 — the offer's grade, and where the trap lives.
-  // Long tenure at the bottom, recent hires at the top: five years of merit at
-  // 3% against a market that moved 5%.
-  { id: 'A-402', gradeId: 'G4', baseSalary: 96_500, fte: 1, hireDate: '2016-04-18', performanceRating: 'Exceeds', managerId: 'A-511' },
-  { id: 'A-408', gradeId: 'G4', baseSalary: 99_200, fte: 1, hireDate: '2018-02-26', performanceRating: 'Meets', managerId: 'A-511' },
-  { id: 'A-411', gradeId: 'G4', baseSalary: 103_400, fte: 1, hireDate: '2017-11-06', performanceRating: 'Meets', managerId: 'A-511' },
-  { id: 'A-418', gradeId: 'G4', baseSalary: 107_900, fte: 1, hireDate: '2019-08-12', performanceRating: 'Outstanding', managerId: 'A-511' },
-  { id: 'A-425', gradeId: 'G4', baseSalary: 111_600, fte: 1, hireDate: '2020-06-01', performanceRating: 'Meets', managerId: 'A-511' },
-  { id: 'A-431', gradeId: 'G4', baseSalary: 54_000, fte: 0.5, hireDate: '2018-10-22', performanceRating: 'Meets', managerId: 'A-511' },
+  // Long tenure sits below the two most recent arrivals: five years of merit at
+  // 3% against a market that moved 5%. The grade is uncomfortable rather than
+  // broken, which is the state a practitioner actually walks into.
+  { id: 'A-402', gradeId: 'G4', baseSalary: 108_500, fte: 1, hireDate: '2016-04-18', performanceRating: 'Exceeds', managerId: 'A-511' },
+  { id: 'A-408', gradeId: 'G4', baseSalary: 110_200, fte: 1, hireDate: '2018-02-26', performanceRating: 'Meets', managerId: 'A-511' },
+  { id: 'A-411', gradeId: 'G4', baseSalary: 112_900, fte: 1, hireDate: '2017-11-06', performanceRating: 'Meets', managerId: 'A-511' },
+  // Six years in, rated Outstanding, and about to be leapfrogged. The finding
+  // the whole tool exists to put in front of somebody.
+  { id: 'A-418', gradeId: 'G4', baseSalary: 109_700, fte: 1, hireDate: '2019-08-12', performanceRating: 'Outstanding', managerId: 'A-511' },
+  { id: 'A-425', gradeId: 'G4', baseSalary: 116_400, fte: 1, hireDate: '2020-06-01', performanceRating: 'Meets', managerId: 'A-511' },
+  { id: 'A-431', gradeId: 'G4', baseSalary: 55_600, fte: 0.5, hireDate: '2018-10-22', performanceRating: 'Meets', managerId: 'A-511' },
   { id: 'A-437', gradeId: 'G4', baseSalary: 118_300, fte: 1, hireDate: '2023-01-09', performanceRating: 'Meets', managerId: 'A-511' },
+  // Hired seven months ago at the top of the grade: market-set, so reported
+  // and never flagged.
   { id: 'A-443', gradeId: 'G4', baseSalary: 121_000, fte: 1, hireDate: '2024-04-15', performanceRating: 'Meets', managerId: 'A-511' },
-  { id: 'A-449', gradeId: 'G4', baseSalary: 114_700, fte: 1, hireDate: '2022-07-25', performanceRating: 'Exceeds', managerId: 'A-518' },
-  { id: 'A-455', gradeId: 'G4', baseSalary: 105_800, fte: 1, hireDate: '2021-03-08', performanceRating: 'Meets', managerId: 'A-518' },
+  { id: 'A-449', gradeId: 'G4', baseSalary: 119_700, fte: 1, hireDate: '2022-07-25', performanceRating: 'Exceeds', managerId: 'A-518' },
+  { id: 'A-455', gradeId: 'G4', baseSalary: 114_300, fte: 1, hireDate: '2021-03-08', performanceRating: 'Meets', managerId: 'A-518' },
+  // Hired three months ago and below everyone: the case the tenure gate is
+  // weakest against, and the reason the two ceilings differ on screen.
+  { id: 'A-468', gradeId: 'G4', baseSalary: 104_000, fte: 1, hireDate: '2024-08-05', performanceRating: 'Meets', managerId: 'A-518' },
   // No hire date: the tenure-unknown case, which a real export produces often.
-  { id: 'A-462', gradeId: 'G4', baseSalary: 109_100, fte: 1, performanceRating: 'Meets', managerId: 'A-518' },
+  { id: 'A-462', gradeId: 'G4', baseSalary: 115_100, fte: 1, performanceRating: 'Meets', managerId: 'A-518' },
 
   // Grade 5 — including one person a whole grade up who is already paid less
   // than the offer. The offer did not cause that; it exposes it.
-  { id: 'A-504', gradeId: 'G5', baseSalary: 112_400, fte: 1, hireDate: '2016-09-19', performanceRating: 'Meets', managerId: 'A-601' },
+  { id: 'A-504', gradeId: 'G5', baseSalary: 109_800, fte: 1, hireDate: '2016-09-19', performanceRating: 'Meets', managerId: 'A-601' },
   { id: 'A-511', gradeId: 'G5', baseSalary: 138_500, fte: 1, hireDate: '2018-01-22', performanceRating: 'Exceeds', managerId: 'A-601' },
   { id: 'A-518', gradeId: 'G5', baseSalary: 131_200, fte: 1, hireDate: '2019-05-07', performanceRating: 'Meets', managerId: 'A-601' },
   { id: 'A-524', gradeId: 'G5', baseSalary: 145_900, fte: 1, hireDate: '2014-11-03', performanceRating: 'Outstanding', managerId: 'A-601' },
@@ -93,16 +101,19 @@ export const SAMPLE_TEAM: Incumbent[] = [
 ]
 
 /**
- * The offer that loads with the sample: a Grade 4 lead at the market rate.
+ * The offer that loads with the sample: a Grade 4 lead, priced a little under
+ * market because the recruiter already tried market and finance said no.
  *
- * $116,000 is above four tenured incumbents including one Outstanding performer,
- * inside the compression threshold of two more, and above A-504, who sits a
- * whole grade higher.
+ * $112,000 is above four tenured incumbents including the Outstanding performer,
+ * inside the compression threshold of three more, and above A-504, who sits a
+ * whole grade higher. It is also well above the clean ceiling, which is the
+ * point: the first screen a practitioner sees should show them a decision with
+ * a price on it, not a clean bill of health.
  */
 export const SAMPLE_OFFER: Offer = {
   label: 'Req 4412',
   gradeId: 'G4',
-  baseSalary: 116_000,
+  baseSalary: 112_000,
   fte: 1,
   startDate: '2024-11-01',
   managerId: 'A-511',

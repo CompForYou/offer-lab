@@ -53,6 +53,33 @@ describe('buildCostedPaths', () => {
     expect(pathB?.offerActual).toBeCloseTo(43_809.5238, 4)
   })
 
+  it('omits the ceiling path when the offer is already below the ceiling', () => {
+    // Nothing to route around, and quoting a higher number than the offer would
+    // read as advice to pay more.
+    const paths = buildCostedPaths({
+      ...BASE,
+      offerActual: 100_000,
+      offerFteSalary: 100_000,
+      gatedCeiling: 104_000,
+    })
+
+    expect(paths.map((path) => path.id)).toEqual(['A', 'C'])
+  })
+
+  it('omits the ceiling path when the offer sits exactly on the ceiling', () => {
+    const paths = buildCostedPaths({
+      ...BASE,
+      offerFteSalary: 100_000,
+      gatedCeiling: 100_000,
+    })
+
+    expect(paths.map((path) => path.id)).toEqual(['A', 'C'])
+  })
+
+  it('keeps the ceiling path when the offer is above the ceiling', () => {
+    expect(buildCostedPaths(BASE).map((path) => path.id)).toContain('B')
+  })
+
   it('omits the ceiling path when there is no constraint', () => {
     // A zero would read as "pay nothing", which is not what "no ceiling" means.
     const paths = buildCostedPaths({ ...BASE, gatedCeiling: null })

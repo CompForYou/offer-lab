@@ -59,7 +59,17 @@ export function buildCostedPaths(input: CostedPathsInput): CostedPath[] {
   // Path B is omitted rather than shown at zero when there is no ceiling: with
   // no constraint there is no lower offer to describe, and a zero would read as
   // "pay nothing", which is not what "no constraint" means.
-  if (input.gatedCeiling !== null && input.offerFte > 0) {
+  //
+  // It is also omitted when the offer already sits at or below the ceiling.
+  // There is then nothing to route around, and a path that quotes a HIGHER
+  // number than the offer reads as advice to pay more — which is not what this
+  // tool is for, and not what the path means.
+  const alreadyClean =
+    input.offerFteSalary !== null &&
+    input.gatedCeiling !== null &&
+    input.offerFteSalary <= input.gatedCeiling
+
+  if (input.gatedCeiling !== null && input.offerFte > 0 && !alreadyClean) {
     const ceilingActual = input.gatedCeiling * input.offerFte
     const path: CostedPath = {
       id: 'B',
