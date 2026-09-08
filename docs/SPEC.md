@@ -480,6 +480,10 @@ pretending the choice is binary.
 Where a path is not available — no ceiling, no inversions — it is omitted rather than
 shown at zero.
 
+Path B is also omitted when the offer already sits at or below the ceiling. There is then
+nothing to route around, and a path quoting a *higher* figure than the offer reads as
+advice to pay more, which is not what this tool is for and not what the path means.
+
 ## 8. Adoption — the three conditions
 
 The value proposition in section 1 is about the cost of the analysis, not its

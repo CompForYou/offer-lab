@@ -141,10 +141,21 @@ Specific to Offer Lab:
 
 ## Current stage
 
-Milestone 0 complete: the project builds, the test suite runs (115 tests, all passing),
-and the shell deploys. `docs/SPEC.md` is agreed — section 13 records the decisions and
-their reasoning, and section 8 holds the three adoption conditions, which are build
-requirements tested at their milestones, not aspirations.
+Milestones 0 through 5 are done and deployed at https://compforyou.github.io/offer-lab/.
+375 tests passing.
 
-Next: Milestone 1, the whole of SPEC section 7 as tested pure functions in `src/lib/`,
-with no interface at all.
+- **M0** scaffold and deploy.
+- **M1** the whole of SPEC section 7 as pure functions in `src/lib/`, each with
+  hand-calculated tests.
+- **M2** column mapping, the incumbent importer, the synthetic team in `src/data/`,
+  and scenario save/load.
+- **M3–M5** the one screen: placement, consequences, cost to fix, the costed paths,
+  and the copy-out paragraph.
+
+Next: **M6, the salary rail** — the draggable offer marker on a min-to-max rail with the
+incumbents as dots, the compression zone as a shaded band travelling with it, and ticks
+for both ceilings and the market reference. SPEC section 10 describes it. This is the
+milestone that makes the tool worth talking about rather than only worth using.
+
+Then M7 (compare two offers, findings to CSV) and M8 (landing copy, README, worked
+example).
