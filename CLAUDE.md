@@ -141,7 +141,10 @@ Specific to Offer Lab:
 
 ## Current stage
 
-Spec under review. The shared math library is copied from Merit Lab and green (115 tests).
-Nothing else is built. `docs/SPEC.md` is a draft awaiting agreement — do not start
-Milestone 0 until Gabriel has signed off on it, and pay particular attention to section 12,
-which lists the open arguments.
+Milestone 0 complete: the project builds, the test suite runs (115 tests, all passing),
+and the shell deploys. `docs/SPEC.md` is agreed — section 13 records the decisions and
+their reasoning, and section 8 holds the three adoption conditions, which are build
+requirements tested at their milestones, not aspirations.
+
+Next: Milestone 1, the whole of SPEC section 7 as tested pure functions in `src/lib/`,
+with no interface at all.
